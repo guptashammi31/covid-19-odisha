@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Covid-19-Odisha.iml" filepath="$PROJECT_DIR$/Covid-19-Odisha.iml" group="Covid-19-Odisha" />
+      <module fileurl="file://$PROJECT_DIR$/app/Covid-19-Odisha-app.iml" filepath="$PROJECT_DIR$/app/Covid-19-Odisha-app.iml" group="Covid-19-Odisha/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="covid-india/app" />
       <module fileurl="file://$PROJECT_DIR$/covid-india.iml" filepath="$PROJECT_DIR$/covid-india.iml" group="covid-india" />
     </modules>

@@ -1,14 +1,24 @@
 package com.technogenr.ocovid.model;
 
 public class HostpotLocation {
+    private String name;
     private double lat, lng;
 
     public HostpotLocation() {
     }
 
-    public HostpotLocation(double lat, double lng) {
+    public HostpotLocation(String name, double lat, double lng) {
+        this.name = name;
         this.lat = lat;
         this.lng = lng;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getLat() {

@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.fragment.app.FragmentActivity;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -13,6 +16,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.technogenr.ocovid.common.Common;
 import com.technogenr.ocovid.listeners.LocationListener;
@@ -23,6 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.technogenr.ocovid.util.LocationUtil;
+
+import java.text.DecimalFormat;
 
 public class HostpotsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -70,7 +76,7 @@ public class HostpotsActivity extends FragmentActivity implements OnMapReadyCall
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     HostpotLocation hostpotLocation=snapshot.getValue(HostpotLocation.class);
                     LatLng sydney = new LatLng(hostpotLocation.getLat(), hostpotLocation.getLng());
-                    mMap.addMarker(new MarkerOptions().position(sydney).title("Hostpot"));
+                    mMap.addMarker(new MarkerOptions().position(sydney).title("Hostpot")).setTag(hostpotLocation);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
                     mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
 
@@ -79,6 +85,38 @@ public class HostpotsActivity extends FragmentActivity implements OnMapReadyCall
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+
+            // Use default InfoWindow frame
+            @Override
+            public View getInfoWindow(Marker arg0) {
+                return null;
+            }
+
+            // Defines the contents of the InfoWindow
+            @Override
+            public View getInfoContents(Marker arg0) {
+
+                // Getting view from the layout file infowindowlayout.xml
+                View v = getLayoutInflater().inflate(R.layout.info_window_layout, null);
+
+                LatLng latLng = arg0.getPosition();
+
+                TextView tvName =  v.findViewById(R.id.tv_name);
+                TextView tvLat =  v.findViewById(R.id.tv_lat);
+                TextView tvLng =  v.findViewById(R.id.tv_lng);
+
+                HostpotLocation hostpotLocation=(HostpotLocation) arg0.getTag();
+                DecimalFormat form = new DecimalFormat("0.0000");
+                tvName.setText(hostpotLocation.getName());
+                tvLat.setText("Lat: "+form.format(hostpotLocation.getLat()));
+                tvLng.setText("Lng: "+form.format(hostpotLocation.getLng()));
+
+
+                return v;
 
             }
         });
