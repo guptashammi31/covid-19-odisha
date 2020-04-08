@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Covid-19 Odisha</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="permission_denied_location">Permission is required to obtain location</string>
+</resources>

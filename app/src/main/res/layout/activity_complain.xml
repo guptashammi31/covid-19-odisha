@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.technogenr.ocovid.ComplainActivity">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="308dp"
+                android:background="@drawable/gradientbackground1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/chooseimage"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/complain" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Complaint Box"
+                    android:textColor="#fff"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:id="@+id/complainbox" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="4dp"
+                app:cardCornerRadius="18dp"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="250dp">
+
+                <LinearLayout
+                    android:background="#a5e5ec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/ImageNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+
+
+                        <ImageView
+                            android:layout_width="95dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity=""
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/write" />
+
+                        <EditText
+                            android:textColor="#000"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/subj"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:hint=" write Topic" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ButtonChooseImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+android:textColor="#000"
+                            android:inputType="textPersonName"
+                            android:id="@+id/message"
+                            android:hint="write   complaints"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            />
+
+
+                        <Button
+                            android:id="@+id/btn"
+                            android:layout_width="234dp"
+                            android:layout_height="54dp"
+android:layout_marginTop="39dp"
+                            android:layout_marginLeft="56dp"
+
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/buttonstyleithgradient"
+                            android:gravity="center"
+                            android:text="Send"
+                            android:layout_centerHorizontal="true"
+
+                            android:textColor="#000"
+                            android:textSize="23dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
