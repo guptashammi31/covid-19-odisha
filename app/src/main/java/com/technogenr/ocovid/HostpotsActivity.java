@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import com.google.android.gms.location.LocationResult;
@@ -60,11 +61,13 @@ public class HostpotsActivity extends FragmentActivity implements OnMapReadyCall
         locationUtil=new LocationUtil(this, new LocationListener() {
             @Override
             public void locationResponse(LocationResult response) {
-                mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(2));
 
                 LatLng latLng = new LatLng(response.getLastLocation().getLatitude(), response.getLastLocation().getLongitude());
                 mMap.setMyLocationEnabled(true);
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+                Toast.makeText(HostpotsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
                 locationUtil.stopUpdateLocation();
 
             }
@@ -78,7 +81,7 @@ public class HostpotsActivity extends FragmentActivity implements OnMapReadyCall
                     LatLng sydney = new LatLng(hostpotLocation.getLat(), hostpotLocation.getLng());
                     mMap.addMarker(new MarkerOptions().position(sydney).title("Hostpot")).setTag(hostpotLocation);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(7));
 
                 }
             }
@@ -106,14 +109,14 @@ public class HostpotsActivity extends FragmentActivity implements OnMapReadyCall
                 LatLng latLng = arg0.getPosition();
 
                 TextView tvName =  v.findViewById(R.id.tv_name);
-                TextView tvLat =  v.findViewById(R.id.tv_lat);
-                TextView tvLng =  v.findViewById(R.id.tv_lng);
+              //  TextView tvLat =  v.findViewById(R.id.tv_lat);
+              //  TextView tvLng =  v.findViewById(R.id.tv_lng);
 
                 HostpotLocation hostpotLocation=(HostpotLocation) arg0.getTag();
                 DecimalFormat form = new DecimalFormat("0.0000");
                 tvName.setText(hostpotLocation.getName());
-                tvLat.setText("Lat: "+form.format(hostpotLocation.getLat()));
-                tvLng.setText("Lng: "+form.format(hostpotLocation.getLng()));
+               // tvLat.setText("Lat: "+form.format(hostpotLocation.getLat()));
+              //  tvLng.setText("Lng: "+form.format(hostpotLocation.getLng()));
 
 
                 return v;

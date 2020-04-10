@@ -6,6 +6,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     card_view:cardElevation="5dp"
+    android:background="@drawable/demo"
+
     card_view:contentPadding="5dp"
     card_view:cardCornerRadius="5dp"
     card_view:cardMaxElevation="5dp"
@@ -20,8 +22,9 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/demo">
 
-        android:background="#ECEFF1">
+<!--        android:background="#ECEFF1">-->
 
 
         <ImageView

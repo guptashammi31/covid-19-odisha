@@ -90,8 +90,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -99,8 +98,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/gradient"
-            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="70dp"
+            android:background="#5be4dc"
             android:orientation="vertical">
 
 
@@ -132,54 +131,54 @@
                 android:layout_gravity="center"
                 android:textColor="#fff" />
 
-
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="2dp"
-                android:textStyle="bold"
                 android:text="HelpLine Number"
-                android:textColor="#212121"
+                android:textColor="#fff"
                 android:textSize="18sp"
+                android:textStyle="bold"
 
                 />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.vipul.hp_hp.timelineview.TimelineView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="25dp"
-                    app:line_size="1dp"
-                    app:marker="@drawable/location_timeline"
-                    app:marker_size="25dp" />
+
 
                 <LinearLayout
-                    android:layout_width="100dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="2dp"
                         android:textStyle="bold"
-                        android:text="Odisha"
+                        android:text="State COVID Helpline Number:"
                         android:textColor="#0e0c0c"
-                        android:textSize="25dp" />
+                        android:textSize="18dp" />
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:paddingEnd="10dp"
-                        android:paddingLeft="2dp"
+                        android:paddingLeft="6dp"
 
                         android:layout_marginTop="3dp"
-                        android:text="9439994859"
+                        android:text="Dial: 104"
                         android:textColor="#120f0f"
                         android:textSize="16dp" />
                 </LinearLayout>
@@ -188,15 +187,177 @@
                     android:id="@+id/c1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="90dp"
-                    android:layout_marginRight="10dp"
                     android:orientation="horizontal">
 
                     <pl.droidsonroids.gif.GifImageView
-                        android:id="@+id/dancer"
+                        android:id="@+id/call1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/callback" />
+                        android:src="@drawable/callll" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:textStyle="bold"
+                        android:text="Smooth Movement of Goods : "
+                        android:textColor="#0e0c0c"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="6dp"
+
+                        android:layout_marginTop="3dp"
+                        android:text="Dial: 0674-2620200 (Police)"
+                        android:textColor="#120f0f"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/call2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/callll" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:layout_marginTop="3dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:textStyle="bold"
+                        android:text="Odia Workers Stranded in other States :"
+                        android:textColor="#0e0c0c"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="6dp"
+
+                        android:layout_marginTop="3dp"
+                        android:text="Dial:0674-2392115"
+                        android:textColor="#120f0f"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/call3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/callll" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:layout_marginTop="3dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:textStyle="bold"
+                        android:text="People of other States stranded in Odisha :"
+                        android:textColor="#0e0c0c"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="6dp"
+
+                        android:layout_marginTop="3dp"
+                        android:text="Dial: +1800 34567 03"
+                        android:textColor="#120f0f"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/call4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/callll" />
 
                 </LinearLayout>
 
@@ -205,116 +366,112 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="3dp"
+
+                android:background="@drawable/buttonstyleithgradient"
+
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.vipul.hp_hp.timelineview.TimelineView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="25dp"
-                    app:line_size="1dp"
-                    app:marker="@drawable/location_timeline"
-                    app:marker_size="25dp" />
+
 
                 <LinearLayout
-                    android:layout_width="100dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="2dp"
                         android:textStyle="bold"
-                        android:text="Angul"
+                        android:text="SANJOG Helpline :"
                         android:textColor="#0e0c0c"
-                        android:textSize="25dp" />
+                        android:textSize="18dp" />
 
                     <TextView
-                        android:layout_width="120dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:paddingEnd="10dp"
-                        android:text="1077"
-                        android:paddingLeft="2dp"
+                        android:paddingLeft="6dp"
 
+                        android:layout_marginTop="3dp"
+                        android:text="Dial:155335 (For grievances)"
                         android:textColor="#120f0f"
                         android:textSize="16dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/c2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="90dp"
-                    android:layout_marginRight="10dp"
                     android:orientation="horizontal">
 
                     <pl.droidsonroids.gif.GifImageView
-                        android:id="@+id/b2"
+                        android:id="@+id/call5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/callback" />
+                        android:src="@drawable/callll" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:layout_marginTop="3dp"
+
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
+                    android:textStyle="bold"
+                    android:text="National Toll Free Number :"
+                    android:textColor="#0e0c0c"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="6dp"
+
+                    android:layout_marginTop="3dp"
+                    android:text="Dial: 1075"
+                    android:textColor="#120f0f"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <com.vipul.hp_hp.timelineview.TimelineView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="25dp"
-                    app:line_size="1dp"
-                    app:marker="@drawable/location_timeline"
-                    app:marker_size="25dp" />
-
-                <LinearLayout
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="2dp"
-                        android:textStyle="bold"
-                        android:text="Registration"
-                        android:textColor="#0e0c0c"
-                        android:textSize="25dp" />
-
-                    <TextView
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:paddingEnd="10dp"
-                        android:paddingLeft="2dp"
-                        android:text="People Returning From Abroad 104"
-                        android:textColor="#120f0f"
-                        android:textSize="16dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/c3"
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/call6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
-
-                    <pl.droidsonroids.gif.GifImageView
-                        android:id="@+id/b3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/callback" />
-
-                </LinearLayout>
-
+                    android:src="@drawable/callll" />
 
             </LinearLayout>
+
+
+        </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

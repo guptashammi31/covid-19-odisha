@@ -15,8 +15,8 @@ public class ComplainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complain);
-        sub = (EditText) findViewById(R.id.subj);
-        mess = (EditText) findViewById(R.id.message);
+        sub = (EditText) findViewById(R.id.title);
+        mess = (EditText) findViewById(R.id.edit_text);
         button11 = (Button) findViewById(R.id.btn);
 
         button11.setOnClickListener(new View.OnClickListener() {

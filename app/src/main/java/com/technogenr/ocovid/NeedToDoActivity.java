@@ -24,6 +24,9 @@ Button back;
         setContentView(R.layout.activity_need_to_do);
 back=(Button)findViewById(R.id.back);
         models = new ArrayList<>();
+        models.add(new Model(R.drawable.maskk, "USE MASK", "Wear a mask if you are coughing or sneezing.\n" +
+                "Masks are effective only when used in combination with frequent hand-cleaning with alcohol-based hand rub or soap and water.\n" +
+                "If you wear a mask, then you must know how to use it and dispose of it properly."));
         models.add(new Model(R.drawable.handwash, "HAND WASH", "Wash your hands often with soap and water for at least 20 seconds especially after you coming from public place.\n" +
                 "If soap and water are not readily available, use a hand sanitizer that contains at least 60% alcohol.\n" +
                 "Avoid touching your eyes, nose, and mouth with unwashed hands."));

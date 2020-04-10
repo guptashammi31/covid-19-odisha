@@ -16,58 +16,55 @@ import com.google.firebase.database.ValueEventListener;
 
 public class HelpLineActivity extends AppCompatActivity {
     Button b1,b2,b3;
-    pl.droidsonroids.gif.GifImageView button,button1,button2;
+    pl.droidsonroids.gif.GifImageView button3,button1,button2,button4,button5,button6;
     String n;
-    DatabaseReference ref;
-    String str="not found";
+   // DatabaseReference ref;
+  //  String str="not found";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help_line);
         b1=(Button)findViewById(R.id.helpb1);
         b2=(Button)findViewById(R.id.helpb2);
-        button=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.dancer);
-        button1=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.b2);
-        button2=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.b3);
-
-
-        ref= FirebaseDatabase.getInstance().getReference("pdf");
-
-        //  ref= FirebaseDatabase.getInstance().getReference(Database_Path);
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-
-                    str=((String) dataSnapshot.child("link").getValue());
+        button1=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.call1);
+        button2=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.call2);
+        button3=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.call3);
+        button4=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.call4);
+        button5=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.call5);
+        button6=(pl.droidsonroids.gif.GifImageView)findViewById(R.id.call6);
 
 //
-                }
-            }
+//
+//        ref= FirebaseDatabase.getInstance().getReference("pdf");
+//
+//        //  ref= FirebaseDatabase.getInstance().getReference(Database_Path);
+//        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if(dataSnapshot.exists())
+//                {
+//
+//                    str=((String) dataSnapshot.child("link").getValue());
+//
+////
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError dataSnapshot) {
+//
+//            }
+//        });
+//
+//
+//
 
-            @Override
-            public void onCancelled(DatabaseError dataSnapshot) {
-
-            }
-        });
 
 
-
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                n="9439994859";
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:"+n));
-                startActivity(intent);            }
-        });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                n="1077";
+                n="104";
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:"+n));
                 startActivity(intent);            }
@@ -76,11 +73,46 @@ public class HelpLineActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                n="104";
+                n="0674-2620200";
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:"+n));
                 startActivity(intent);            }
         });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                n="0674-2392115";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+n));
+                startActivity(intent);            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                n="1800 34567 03";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+n));
+                startActivity(intent);            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                n="155335";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+n));
+                startActivity(intent);            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                n="1075";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+n));
+                startActivity(intent);            }
+        });
+
+
+
 
 
         b1.setOnClickListener(new View.OnClickListener() {

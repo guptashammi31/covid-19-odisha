@@ -5,12 +5,14 @@ import android.net.Uri;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -54,22 +56,39 @@ WebView webView;
     //    ListView listOfMessages;
     String str,n,w;
     String urlimage;
+    ProgressBar progressbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_details);
 
 
+       // progressbar = (ProgressBar) findViewById(R.id.progressbar);
 
+        str = getIntent().getExtras().getString("link");
 
 
 
          webView = (WebView) findViewById(R.id.web);
                  webView.setWebViewClient(new WebViewClient());
-                 webView.loadUrl("https://covid19.odisha.gov.in/registration");
+
+
 
                  WebSettings webSettings = webView.getSettings();
                  webSettings.setJavaScriptEnabled(true);
+        webSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        webSettings.setDomStorageEnabled(true);
+                 webView.loadUrl(str);
+                 webView.setWebViewClient(new WebViewClient() {
+
+            public void onPageFinished(WebView view, String url) {
+                // do your stuff here
+                //progressbar.setVisibility(View.GONE);
+            }
+        });
                  }
 
 @Override

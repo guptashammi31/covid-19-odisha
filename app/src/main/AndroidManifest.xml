@@ -3,16 +3,17 @@
     package="com.technogenr.ocovid">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Permissions's -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- Permissions's -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--
+        <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
@@ -26,7 +27,8 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Update3Activity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,19 +41,12 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyAdIDb0o-t8xCw3gh_kniTzAMo6y1X4IDY" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
         <activity android:name=".SendDetailsActivity" />
-        <activity android:name=".ThankYouActivity" />
         <activity android:name=".HelpLineActivity" />
         <activity android:name=".TwitterWebActivity" />
         <activity android:name=".WebviewActivity" />
-        <activity
-            android:name=".MapsActivity2"
-            android:label="@string/title_activity_maps2" />
         <activity
             android:name=".HostpotsActivity"
             android:label="@string/title_activity_maps2" />

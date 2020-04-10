@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout testyourself,linearLayout43,linearLayout44;
     Animation atg, atgtwo, atgthree;
     DatabaseReference ref;
-    String temp="not available";
+    String temp="not available",temp2="notfound";
     private APIHelper apiHelper;
     private RequestQueue mQueue;
     @Override
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
                 if(dataSnapshot.exists())
                 {
                     temp=((String) dataSnapshot.child("link").getValue());
-                    Tag.setText((String) dataSnapshot.child("TagLine").getValue());
-//                    t3.setText((String) dataSnapshot.child("india").child("death").getValue());
+                    Tag.setText((String) dataSnapshot.child("Tag").getValue());
+                  temp2=((String) dataSnapshot.child("linkb3").getValue());
 //                    t4.setText((String) dataSnapshot.child("odisha").child("active").getValue());
 //                    t5.setText((String) dataSnapshot.child("odisha").child("discharge").getValue());
 //                    t6.setText((String) dataSnapshot.child("odisha").child("death").getValue());
@@ -123,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SendDetailsActivity.class);
+                intent.putExtra("link",temp2);
+
                 startActivity(intent);
             }
         });

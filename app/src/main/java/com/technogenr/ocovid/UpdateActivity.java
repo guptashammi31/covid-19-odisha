@@ -6,8 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class UpdateActivity extends AppCompatActivity {
     Button up1,up2,up3,up4;
+    DatabaseReference ref;
+    String temp="not available";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +24,23 @@ public class UpdateActivity extends AppCompatActivity {
         up2=(Button)findViewById(R.id.up2);
         up3=(Button)findViewById(R.id.up3);
         up4=(Button)findViewById(R.id.up4);
+
+        ref= FirebaseDatabase.getInstance().getReference("TestCovid");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists())
+                {
+                    temp=((String) dataSnapshot.child("AllIndia").getValue());
+                    //Tag.setText((String) dataSnapshot.child("Tag").getValue());
+
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError dataSnapshot) {
+            }
+        });
+
 
         up1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,8 +61,8 @@ public class UpdateActivity extends AppCompatActivity {
         up3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UpdateActivity.this, ThankYouActivity.class);
-                // intent.putExtra("weburl", "https://twitter.com/HFWOdisha?s=03");
+                Intent intent = new Intent(UpdateActivity.this, Update3Activity.class);
+                intent.putExtra("link",temp);
                 startActivity(intent);
             }
         });

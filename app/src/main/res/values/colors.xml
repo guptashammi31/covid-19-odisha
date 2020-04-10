@@ -6,6 +6,9 @@
     <color name="colorLine">#dad6d6</color>
     <color name="color1">#5d98e7</color>
     <color name="color2">#dadc7c</color>
-    <color name="color3">#796e25</color>
-    <color name="color4">#8eaaba</color>
+    <color name="color3">#AD4EDBF1</color>
+    <color name="color4">#7FC9F3</color>
+    <color name="bg">#5be4dc</color>
+    <color name="textcolor">#ffff</color>
+    <color name="colort">#f11952</color>
 </resources>
